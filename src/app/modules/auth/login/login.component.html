@@ -1,0 +1,126 @@
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="spacer"></div>
+<div class="container h-100">
+  <div class="d-flex justify-content-center h-100">
+    <div class="user_card">
+      <div class="d-flex justify-content-center">
+        <div class="brand_logo_container">
+          <img src="../../../assets/images/recurring.png" class="brand_logo" alt="Logo">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center form_container">
+        <form class="needs-validation" [formGroup]="signInForm" (ngSubmit)="onSubmit()" novalidate>
+          <div class="form-row">
+
+            <div class="col mb-3">
+              <!-- <label for="validationCustomUsername">Username</label> -->
+              <div class="input-group"
+                [ngClass]="{'was-validated': signInForm.controls.email.touched&& signInForm.controls.email.invalid && signInForm.controls.email.errors}">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control " formControlName="email" placeholder="Username"
+                  aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  <!-- <app-error-messages [control]="signInForm.controls.email" [fieldName]="'UserName'">
+                  </app-error-messages> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+
+            <div class="col mb-3">
+              <!-- <label for="validationCustomUsername">Username</label> -->
+              <div class="input-group"
+                [ngClass]="{'was-validated': signInForm.controls.password.touched&& signInForm.controls.password.invalid}">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-key"></i></span>
+                </div>
+                <input type="password" class="form-control" formControlName="password" placeholder="Password"
+                  aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  <!-- <app-error-messages [control]="signInForm.controls.password" [fieldName]="'Password'">
+                  </app-error-messages> -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label" for="invalidCheck">
+                Remember Me
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="d-flex justify-content-center mt-3 login_container">
+              <input type="submit" name="button" class="btn login_btn btn-primary" value="Login">
+            </div>
+          </div>
+          <!-- <button class="btn btn-primary btn-lg" type="submit" >Login</button> -->
+        </form>
+        <!-- <form [formGroup]="signInForm">
+            <div class="form-group" >
+              <div class="input-group mb-3">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-user"></i></span>
+                </div>
+                <input type="text" name="" formControlName="email" class="form-control input_user" value="" placeholder="username">
+
+              </div>
+                                    <app-error-messages [control]="signInForm.controls.email"></app-error-messages>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group mb-2">
+                <div class="input-group-append">
+                  <span class="input-group-text"><i class="fa fa-key"></i></span>
+                </div>
+                <input type="password" name="" formControlName="password" class="form-control input_pass" value=""
+                  placeholder="password">
+              </div>
+              <app-error-messages [control]="signInForm.controls.password"></app-error-messages>
+            </div>
+
+                      <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input input-lg" id="customControlInline">
+                          <label class="custom-control-label" for="customControlInline">Remember me</label>
+                        </div>
+                      </div>
+                    <div class="form-group">
+                          <div class="d-flex justify-content-center mt-3 login_container">
+                            <button type="button" name="button" class="btn login_btn btn-primary">Login</button>
+                          </div>
+                    </div>
+        </form> -->
+      </div>
+
+
+      <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+          Don't have an account? &nbsp;<a [routerLink]="[ '/auth/signup' ]">Sign Up</a>
+        </div>
+
+        <!-- <div class="d-flex justify-content-center links">
+          <a href="#">Forgot password?</a>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- <button type="button" (click)="signIn()">SignIn</button> -->
