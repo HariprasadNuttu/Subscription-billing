@@ -28,6 +28,7 @@ import { DefaultLayoutComponent } from './modules/layout/default-layout/default-
 
 import {HttpTokenInterceptor} from './core/interceptors/http.token.interceptor';
 import { InvoiceComponent } from './modules/invoice/invoice.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { InvoiceComponent } from './modules/invoice/invoice.component';
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    SharedModule,
     AppRoutingModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),

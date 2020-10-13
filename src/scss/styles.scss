@@ -1,3 +1,5 @@
+// @import "../assets/css/util.css";
+// @import "../assets/css/main.css";
 // If you want to override variables do it here
 @import "variables";
 
@@ -53,5 +55,10 @@ body{
   
   }
   
-  
- 
+  .invalid-text{
+    color: #f86c6b;
+  }
+
+  .error-block {
+    padding-left: 120px;
+  }

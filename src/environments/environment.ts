@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  hostUrl: 'http://localhost:8020/aaa-mwg-ersbackofficedev/us-central1/aaa_audit/'
+  hostUrl: 'http://localhost:3000/'
 };
 
 /*

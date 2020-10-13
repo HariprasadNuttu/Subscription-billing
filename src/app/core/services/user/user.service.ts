@@ -29,7 +29,17 @@ export class UserService {
     return this.http.post(environment.hostUrl + 'auth/sign_in', userData);
   }
 
+  signUp(userData) {
+    return this.http.post(environment.hostUrl + 'auth/sign_up', userData);
+  }
   
+  forgotPassword(userData) {
+    return this.http.post(environment.hostUrl + 'auth/forgot_password', userData);
+  }
+  resetPassword(userData) {
+    return this.http.post(environment.hostUrl + 'auth/reset_password', userData);
+  }
+
   
 
 }

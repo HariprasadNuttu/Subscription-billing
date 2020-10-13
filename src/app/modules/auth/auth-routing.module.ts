@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-
+import { AuthComponent } from './auth.component';
 import { SignupComponent } from './signup/signup.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -11,7 +11,7 @@ import { AuthBeforeLoginGuard } from 'src/app/core/guards/auth-before-login.guar
 const routes: Routes = [
   {
     path: '',
-    component: LoginComponent,
+    component: AuthComponent,
     canActivateChild: [AuthBeforeLoginGuard],
     children: [
       {
@@ -49,6 +49,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+exports: [RouterModule],
 })
 export class AuthRoutingModule {}
